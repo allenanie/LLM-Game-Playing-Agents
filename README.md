@@ -1,29 +1,12 @@
 # Learning Game-Playing Agents with Generative Code Optimization
 
-Code for *Learning Game-Playing Agents with Generative Code Optimization* (ICML 2025 PRAL Workshop). We use Trace LLM optimizers (OptoPrime) to optimize Python policies to play Atari games via object-centric representations (OC_Atari). This repo provides the framework where you can let LLM play with Atari games via annotated text interfaces (no image/video required). 
-
-Paper that includes 3 initial games (Pong, Breakout, Space Invaders): https://openreview.net/forum?id=ZM65X3NoTd
-
-Paper that includes 8 games: http://arxiv.org/abs/2603.23994
-
-<img width="2410" height="1516" alt="image" src="https://github.com/user-attachments/assets/deb16cf8-cfb5-4553-a2cf-6cc09a9efe9f" />
-
 ## Supported Games
 
 Asterix, Breakout, Enduro, Freeway, Pong, Q*bert, Seaquest, Space Invaders
 
 ## Deep RL Baselines
 
-We compare LLM-optimized policies against deep RL baselines that also use object-centric representations. Our [CleanRL fork](https://github.com/ameliakuang/cleanrl_obj_centric) includes:
-- [Object-centric Atari environment](https://github.com/ameliakuang/cleanrl_obj_centric/blob/master/cleanrl/obj_atari_env.py)
-- [PPO baseline](https://github.com/ameliakuang/cleanrl_obj_centric/blob/master/cleanrl/obj_ppo_cleanrl.py)
-- [DQN baseline](https://github.com/ameliakuang/cleanrl_obj_centric/blob/master/cleanrl/obj_dqn_atari.py)
-- [SAC baseline](https://github.com/ameliakuang/cleanrl_obj_centric/blob/master/cleanrl/sac_obj_atari.py) 
-
-We share the training logs on Wandb:
-- [DQN training log](https://wandb.ai/kuangzy-amelia-stanford-university/obj-dqn-5trials-new)
-- [PPO training log](https://wandb.ai/kuangzy-amelia-stanford-university/obj-ppo-5trials-flatten)
-- [SAC training log](https://wandb.ai/kuangzy-amelia-stanford-university/obj-sac-5trials)
+We compare LLM-optimized policies against deep RL baselines that also use object-centric representations. 
 
 ## Setup
 
@@ -35,12 +18,10 @@ bash install.sh
 
 This will:
 - Install [uv](https://github.com/astral-sh/uv) if not already present
-- Clone the [OC_Atari](https://github.com/ameliakuang/OC_Atari) library into `external/OC_Atari/`
+- Clone the [OC_Atari](https://oc-atari.readthedocs.io/en/latest/ocatari/core.html)) library into `external/OC_Atari/`
 - Install all Python dependencies via `uv sync`
 
 ### 2. Configure environment variables
-
-Follow the [LLM API Setup of Trace](https://github.com/microsoft/Trace?tab=readme-ov-file#llm-api-setup) to use OptoPrime as the supported optimizer.
 
 ## Running Training
 
