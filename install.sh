@@ -1,6 +1,3 @@
-# This file credits to https://github.com/AgentOpt/Trace-Bench/blob/main/KernelBench/install.sh
-# Original author: Allen Nie
-
 #!/usr/bin/env sh
 set -eu
 
@@ -42,7 +39,7 @@ command -v git >/dev/null 2>&1 || { echo "git is required"; exit 1; }
 
 EXTERNAL_DIR=${EXTERNAL_DIR:-"$SCRIPT_DIR/external"}
 OC_Atari_DIR=${OC_Atari_DIR:-"$EXTERNAL_DIR/OC_Atari"}
-OC_Atari_URL=${OC_Atari_URL:-"https://github.com/ameliakuang/OC_Atari.git"}
+OC_Atari_URL=${OC_Atari_URL:-"https://github.com/k4ntz/OC_Atari"}
 
 mkdir -p "$EXTERNAL_DIR"
 
